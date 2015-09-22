@@ -22,6 +22,7 @@
       margin: auto;
   }
   </style>
+<script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
 </head>
 <body>
 <nav class="navbar navbar-default">
@@ -119,23 +120,42 @@
   </div>
   <hr>
   <div class="row">
-    <div class="col-sm-4 text-center">
-  <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/oijm9CSQkN4"></iframe>
-  </div>
+    <div class="text-center col-sm-4">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/oijm9CSQkN4"></iframe>
+      </div>
     </div>
     <div class="text-center col-sm-4">
-  <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="videos/trailer.mp4"></iframe>
-  </div>
-    <div class="text-center col-sm-4">
-      <h4>Adding <strong>Glyphicons</strong></h4>
-      <p>You can also add glyphicons to your page from within the insert panel.</p>
-      <div class="row">
-        <div class="col-xs-4"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></div>
-        <div class="col-xs-4"><span class="glyphicon glyphicon-home" aria-hidden="true"> </span> </div>
-        <div class="col-xs-4"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></div>
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="videos/trailer.mp4"></iframe>
       </div>
+	</div>
+    <div class="text-center col-sm-4">
+      <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="250" height="250" id="FlashID" title="animacion flash">
+        <param name="movie" value="videos/banner.swf">
+        <param name="quality" value="high">
+        <param name="wmode" value="opaque">
+        <param name="swfversion" value="11.2.0.0">
+        <!-- Esta etiqueta param indica a los usuarios de Flash Player 6.0 r65 o posterior que descarguen la versión más reciente de Flash Player. Elimínela si no desea que los usuarios vean el mensaje. -->
+        <param name="expressinstall" value="Scripts/expressInstall.swf">
+        <!-- La siguiente etiqueta object es para navegadores distintos de IE. Ocúltela a IE mediante IECC. -->
+        <!--[if !IE]>-->
+        <object type="application/x-shockwave-flash" data="videos/banner.swf" width="250" height="250">
+          <!--<![endif]-->
+          <param name="quality" value="high">
+          <param name="wmode" value="opaque">
+          <param name="swfversion" value="11.2.0.0">
+          <param name="expressinstall" value="Scripts/expressInstall.swf">
+          <!-- El navegador muestra el siguiente contenido alternativo para usuarios con Flash Player 6.0 o versiones anteriores. -->
+          <div>
+            <figure>
+                <img src="imagenes/lamina.jpg">	
+            </figure>
+          </div>
+          <!--[if !IE]>-->
+        </object>
+        <!--<![endif]-->
+      </object>
     </div>
   </div>
   <hr>
@@ -152,5 +172,8 @@
 
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
 <script src="../restaurantlasdelicias/js/bootstrap.js"></script>
+<script type="text/javascript">
+swfobject.registerObject("FlashID");
+</script>
 </body>
 </html>
